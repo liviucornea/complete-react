@@ -1,0 +1,69 @@
+// COLOURS
+$sc-orange:#F68B32;
+$orange-neon: #FD7012;
+$orange: #b94502;
+$light-blue: #daeefe;
+$light-blue-desat: #8ebade;
+$blue: #005aa2;
+$blue-neon: #23B5D3;
+$dark-blue: #003057;
+$yellow: #EFCA08;
+$med-grey: #c0c0c0;
+$med-dark-grey: #595959;
+$dark-grey: #3f3f3f;
+$off-black: #07070A;
+$lighter-grey: #f7f7f7;
+$light-grey: #ededed;
+$dark-purple: #520040;
+$purple: #892289;
+$purple-neon: #C886FD;
+$green: #8EB640;
+$green-ui: #23821C;
+$dark-green: #00661D;
+$red: #A30600;
+$fade-dark-bg: rgba(0,0,0,.66);
+$fade-darker-bg: rgba(0,0,0,.8);
+$fade-white-bg: rgba(255, 255, 255, 0.9);
+$spinner-background: rgba(255, 255, 255, 1);
+$spinner-global-background: $dark-grey;
+$secondary: #00A221;
+$spinner-color: $blue;
+$spinner-wedge-color: $secondary;
+// FONTS
+$overpass: Overpass, sans-serif;
+
+// MISC
+$cubic: cubic-bezier(.64, .09, .08, 1);
+
+// ANIMATIONS
+@keyframes rotate-infinite {
+  from {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.rotate-infinite {
+  animation: rotate-infinite 2s linear infinite;
+  -webkit-animation: rotate-infinite 2s linear infinite;
+  -moz-animation: rotate-infinite 2s linear infinite;
+  -ms-animation: rotate-infinite 2s linear infinite;
+  -o-animation: rotate-infinite 2s linear infinite;
+}
+
+%compare-close {
+  position: absolute;
+  z-index: 9;
+  top: 5px;
+  color: $red !important;
+}
+

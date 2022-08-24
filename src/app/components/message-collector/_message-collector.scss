@@ -1,0 +1,87 @@
+@import './../../../styles/_variables.scss';
+.error-collector {
+    img {
+        fill: $orange-neon;
+    }
+    // notifications
+    .notification {
+        font-family: $overpass;
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        padding: 30px;
+        border-bottom: 1px $med-grey solid;
+        border-top: 1px $med-grey solid;
+        border-radius: 5px;
+        position: relative;
+        .close {
+            @extend %compare-close;
+            color: $dark-grey !important;
+            right: 15px;
+        }
+
+        &.ng-star-inserted:first-child {
+            margin-top: 30px;
+        }
+
+        .notification-icon {
+            margin-right: 30px;
+            cursor: pointer;
+            svg {
+                height: 32px;
+                width: 32px;
+            }
+        }
+
+        .notification-content {
+            display: inline-block;
+
+            p:only-child {
+                margin-top: 3px;
+            }
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+
+    .notification-critical {
+        border-left: 5px $red solid;
+        border-right: 5px $red solid;
+        svg {
+            fill: $red;
+        }
+    }
+
+    .notification-warning {
+        border-left: 5px $orange-neon solid;
+        border-right: 5px $orange-neon solid;
+        svg {
+            fill: $orange-neon;
+        }
+    }
+
+    .notification-success {
+        border-left: 5px $green-ui solid;
+        border-right: 5px $green-ui solid;
+        svg {
+            fill: $green-ui;
+        }
+    }
+
+    .notification-informational {
+        border-left: 5px $blue solid;
+        border-right: 5px $blue solid;
+        svg {
+            fill: $blue;
+        }
+        font-family: $overpass;
+    }
+    .conf_message{
+        font-family: $overpass;
+    }
+
+
+}

@@ -1,0 +1,17 @@
+.triangle-css {
+  // Vars
+
+  // Support
+
+  // Module
+  & {
+    //
+  }
+  height: 0;
+  width: 0;
+  ///  background-color: red;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+ // border-left: 100px solid transparent;
+  border-right: 10px solid darkgreen;
+}
