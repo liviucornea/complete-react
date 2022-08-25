@@ -1,16 +1,24 @@
-import React from 'react'
-import styles from './Footer.module.css'
+import React from 'react';
+import './footer.main.scss';
 import TriangleCss from '../triangle-css/triangle-css';
 
 
+type Props = {}
 
-export function Footer() {
-    let mainClass = [styles.mainFooter + ' container'].join(' ');
+// eslint-disable-next-line 
+export function Footer({}: Props) {
+    let mainClass = ['mainFooter' , ' container'].join(' ');
     return (<div className={mainClass}>
         <hr />
-        <div>
-            <TriangleCss />
+        <div className="triangles">
+                <div>
+                    <TriangleCss orientation='right' />
+                </div>
+                <div>
+                    <TriangleCss orientation='left'/>
+                </div>
         </div>
+
         <span>Learn React JS</span>
         <a className="App-link"
            href="https://reactjs.org/"

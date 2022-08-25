@@ -52,8 +52,7 @@ function App() {
           ></Route>
           <Route path="/todos" element={<ToDoMain />}></Route>
           <Route path="/todo/:id" element={<TodoEdit />}></Route>
-          <Route
-            path="/topics/*"
+          <Route path="/topics/*"
             element={
               <TopicsMain description={"My main Topic functional component"} />
             }

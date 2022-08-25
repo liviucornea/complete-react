@@ -12,6 +12,14 @@
   ///  background-color: red;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
- // border-left: 100px solid transparent;
+  // border-left: 10px solid darkgreen;
+ //border-right: 10px solid darkgreen;
+}
+// if you want orientation right, you set left border
+.orientation-right {
+  border-left: 10px solid darkgreen;
+}
+// if you want orientation left, you set right border
+.orientation-left {
   border-right: 10px solid darkgreen;
 }
