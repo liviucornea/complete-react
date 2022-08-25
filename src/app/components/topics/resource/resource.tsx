@@ -1,7 +1,6 @@
-import React from 'react';
-import {useMatch, useParams} from "react-router";
-import {TopicsList} from "../data-models";
-import   './_resource.scss';
+import { useParams } from "react-router";
+import { TopicsList } from "../data-models";
+import './_resource.scss';
 
 type Props = {}
 
