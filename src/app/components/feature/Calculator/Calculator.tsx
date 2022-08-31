@@ -8,7 +8,7 @@ export default function Calculator() {
 
    const handleCelsiusChange = (temperature: number) =>  {
         setTemperature( temperature);
-       setScale('c');
+        setScale('c');
     }
 
    const  handleFahrenheitChange = (temperature: number) => {
@@ -19,6 +19,7 @@ export default function Calculator() {
     const celsius = scale === 'f' ? tryConvert(temperature.toString(), toCelsius) : temperature;
     const fahrenheit = scale === 'c' ? tryConvert(temperature.toString(), toFahrenheit) : temperature;
     return (<div className="Calculator">
+        <div>Scale is set to: {scale}</div>
             <TemperatureInput
                 scale="c"
                 temperature={celsius}
@@ -29,6 +30,7 @@ export default function Calculator() {
                 onTemperatureChange={handleFahrenheitChange} />
                 <BoilingVerdict
                     celsius={parseFloat(celsius.toString())} />
+
         </div>
         );
 }

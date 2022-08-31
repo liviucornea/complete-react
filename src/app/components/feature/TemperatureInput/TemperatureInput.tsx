@@ -9,10 +9,10 @@ export const scaleNames: scaleTemp = {
     'c': 'Celsius',
     'f': 'Fahrenheit'
 };
-type Props = {onTemperatureChange: (temp: number) => void,
-    temperature: string | number
-                scale: string}
-
+type Props = {  onTemperatureChange: (temp: number) => void,
+                temperature: string | number,
+                scale: string
+            }
 
 export function TemperatureInput(props: Props) {
  const handleChange = (e: any) => {

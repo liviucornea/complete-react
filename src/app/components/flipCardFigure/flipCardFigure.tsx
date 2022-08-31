@@ -1,5 +1,5 @@
 import React from 'react';
-import './_flipCardFigure.scss'
+import styles from './flipCardFigure.module.scss'
 
 type Props = {
     titleFront: string,
@@ -7,16 +7,17 @@ type Props = {
 }
 
 export default function FlipCardFigure(props: Props) {
+    console.log('FlipCardFigure code is executet');
     return (
-        <div className="container">
+        <div className={styles.container}>
             <span>This is a flip card component</span>
             <span>Please mouse over!</span>
-            <div className="card-container">
-                <div className="card">
-                    <figure className="front">
+            <div className={styles['card-container']}>
+                <div className={styles.card}>
+                    <figure className={styles.front}>
                         <h1>{props.titleFront}</h1>
                     </figure>
-                    <figure className="back">
+                    <figure className={styles.back}>
                         <h1>{props.titleBack}</h1>
                     </figure>
                 </div>

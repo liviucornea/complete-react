@@ -1,0 +1,30 @@
+.childHome  .buttons{
+    display: flex;
+    gap: 20px;
+    background-color: green;
+}
+.childHome {
+    // Vars
+
+    // Support
+
+    // Module
+    & {
+        //
+    }
+
+    // Facets
+
+    // States
+    .buttons {
+        display: flex;
+        gap: 20px;
+        background-color: gray;
+    }
+}
+
+[type="password"],
+input:focus,
+:root #myApp input:required {
+  color: blue;
+}
