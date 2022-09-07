@@ -5,15 +5,17 @@ import {TemperatureInput} from "../TemperatureInput/TemperatureInput";
 export default function Calculator() {
     const [temperature, setTemperature] = useState(99);
     const [scale, setScale] = useState('c');
-
+    console.log('Calculator component is rendered');
    const handleCelsiusChange = (temperature: number) =>  {
         setTemperature( temperature);
         setScale('c');
+        console.log('handleCelsiusChange in Calculator component is rendered');
     }
 
    const  handleFahrenheitChange = (temperature: number) => {
        setTemperature( temperature);
        setScale('f');
+       console.log('handleFahrenheitChange in Calculator component is rendered');
     }
 
     const celsius = scale === 'f' ? tryConvert(temperature.toString(), toCelsius) : temperature;

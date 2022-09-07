@@ -1,5 +1,5 @@
 import { Route, Routes, useHref, useParams } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { TopicsList } from "../data-models";
 import Resource from "../resource/resource";
 
@@ -21,6 +21,12 @@ Consider the route "/users/:userId". match.path would be "/users/:userId" while 
   });
   return (
     <div className="topic">
+
+        {/* <span>Router outlet here at top  as you can vae it in multiple places is same time!!!</span>
+            <div className="content">
+            <Outlet />
+          </div> */}
+
       <h2>Topic: {topic?.name} </h2>
       <p>{topic?.description}</p>
       <ul>
@@ -33,9 +39,17 @@ Consider the route "/users/:userId". match.path would be "/users/:userId" while 
         })}
       </ul>
       <hr />
-      <Routes>
+      {/* use below block if you want to render nested route/component right here where the block of Routs sits */}
+      {/* <Routes>
         <Route path={`/:resourceId`} element={<Resource />}></Route>
-      </Routes>
+      </Routes> */}
+      <div>
+      <div className="content">
+        <span>Router outlet here at bottom!!!</span>
+        <Outlet />
+        <span>After Outlet component!!!</span>
+      </div>
+      </div>
     </div>
   );
 }

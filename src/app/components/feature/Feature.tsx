@@ -5,7 +5,7 @@ export function Feature() {
 
     // NOTE:  Similar to componentDidMount and componentDidUnmount:
     useEffect(() => {
-        console.log(' Equivalent of component did mount');
+        console.log('Equivalent of component did mount - Feature component');
         return () => {
             console.log(' Equivalent of component will unmount');
         }

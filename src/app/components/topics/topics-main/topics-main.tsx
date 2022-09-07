@@ -3,6 +3,7 @@ import { TopicsList } from'../data-models';
 // import styles from './topics.module.scss';
 import {Link, Route, Routes, useMatch, useHref} from "react-router-dom";
 import Topic from "../topic/topic";
+import Resource from '../resource/resource';
 
 type Props = {
     description: string
@@ -24,7 +25,9 @@ export default function TopicsMain(input: Props) {
         </ul>
         <hr />
         <Routes>
-            <Route path={`/:topicId/*` } element={<Topic/>} >       
+            <Route path={`/:topicId/*` } element={<Topic/>} > 
+
+                <Route path={`:resourceId`} element={<Resource />}></Route>     
             </Route>
         </Routes>
     </div>);
