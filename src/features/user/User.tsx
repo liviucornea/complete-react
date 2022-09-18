@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {logIn, selectUser} from "./userSlice";
 //in react-router-dom v6 useHistory() is replaced by useNavigate().
-//import {useHistory} from "react-router";
+// import {useHistory} from "react-router";
 import { useNavigate } from 'react-router-dom';
 import {UserModel} from "../models/UserModel";
 import {loadMessage} from "../../app/components/message-collector/mesagesSlice";
